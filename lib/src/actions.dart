@@ -89,7 +89,6 @@ class CustomSlidableAction extends StatelessWidget {
                 Brightness.light
             ? Colors.black
             : Colors.white);
-
     return Expanded(
       flex: flex,
       child: SizedBox.expand(
@@ -98,9 +97,7 @@ class CustomSlidableAction extends StatelessWidget {
           style: OutlinedButton.styleFrom(
             padding: padding,
             backgroundColor: backgroundColor,
-            disabledForegroundColor: effectiveForegroundColor.withValues(
-              alpha: 0.38,
-            ),
+            disabledForegroundColor: effectiveForegroundColor.withAlpha((38.0/255.0).toInt()),
             iconColor: effectiveForegroundColor,
             foregroundColor: effectiveForegroundColor,
             shape: RoundedRectangleBorder(
